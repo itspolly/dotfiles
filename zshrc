@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/null/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # -------------------------------------------------------------------
 # General ZSH config
@@ -29,6 +29,7 @@ alias gpu='git pull'
 alias gcl='git clone'
 alias gta='git tag -a -m'
 alias gf='git reflog'
+alias gs='git status'
 
 # -------------------------------------------------------------------
 # Useful Functions

@@ -10,6 +10,7 @@ My dotfiles.
 * git
 
 ### installing
+**Please uninstall & backup your old files, including oh-my-zsh before running**
 
 1. git clone https://github.com/nullpixel/dotfiles ~/dotfiles
 2. chmod +x make.sh
