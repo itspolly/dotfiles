@@ -9,9 +9,6 @@
 # Dotfiles dir
 dir=~/dotfiles
 
-#Old dotfiles backup directory
-olddir=~/dotfiles_old 
-
 # list of files/folders to symlink in homedir
 files="bashrc vimrc vim zshrc oh-my-zsh gitignore" 
 
@@ -28,14 +25,12 @@ cd $dir
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
-    echo "Moving old $file from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    echo "Deleting old $file"
+    rm -rf ~/.$file
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    ln -s $dir/dots/$file ~/.$file
 done
 
-# update vim submodules
-echo "Updating vim submodules"
-cd ~/dotfiles/vim
+echo "Updating submodules"
 git submodule update --init
 echo "...done"
