@@ -10,15 +10,12 @@
 dir=~/dotfiles
 
 # list of files/folders to symlink in homedir
-files="bashrc vimrc vim zshrc oh-my-zsh gitignore" 
+files="tmux.conf bashrc vimrc vim zshrc oh-my-zsh gitignore" 
 
 ### Script
 
 # Remove old old dotfiles dir in case some cuck is rerunning
 rm -rf $olddir
-
-# create dotfiles_old in homedir
-mkdir -p $olddir
 
 # change to the dotfiles directory
 cd $dir
