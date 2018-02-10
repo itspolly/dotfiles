@@ -98,6 +98,9 @@ alias countfiles="for t in files links directories; do echo \`find . -type \${t:
 # Serve the current folder
 alias serve="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 
+# lmao
+alias fucking=sudo
+
 # -------------------------------------------------------------------
 # User configuration
 # -------------------------------------------------------------------
