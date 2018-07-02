@@ -4,3 +4,6 @@
 [submodule "zsh-custom/themes/dracula-theme"]
 	path = zsh-custom/themes/dracula-theme
 	url = https://github.com/dracula/zsh.git
+[submodule "dots/vim/bundle/Vundle.vim"]
+	path = dots/vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
