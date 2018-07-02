@@ -1,6 +1,6 @@
 [submodule "dots/oh-my-zsh"]
 	path = dots/oh-my-zsh
-	url = https://github.com/nullpixel/oh-my-zsh.git
-[submodule "dots/vim/bundle/dracula-theme"]
-	path = dots/vim/bundle/dracula-theme
-	url = https://github.com/dracula/vim.git
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "zsh-custom/themes/dracula-theme"]
+	path = zsh-custom/themes/dracula-theme
+	url = https://github.com/dracula/zsh.git

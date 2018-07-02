@@ -1,4 +1,31 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Dracula theme
+Plugin 'dracula/vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 syntax on
+
+" Add line numbers 
+set number
+
+" Add paste toggle 
+set pastetoggle=<F2>
+
+" Smart search
+set smartcase
+set ignorecase
 
 " 4 spaces instead of tabs
 filetype plugin indent on
