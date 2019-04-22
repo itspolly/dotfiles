@@ -2,7 +2,7 @@
 	path = dots/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "zsh-custom/themes/dracula-theme"]
-	path = zsh-custom/themes/dracula-theme
+	path = zsh-custom/themes/dracula-theme.zsh-theme
 	url = https://github.com/dracula/zsh.git
 [submodule "dots/vim/bundle/Vundle.vim"]
 	path = dots/vim/bundle/Vundle.vim
