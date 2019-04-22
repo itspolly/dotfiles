@@ -1,1 +1,1 @@
-zsh-custom/themes/dracula-theme/dracula.zsh-theme
+dracula-theme/dracula.zsh-theme
