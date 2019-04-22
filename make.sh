@@ -184,4 +184,4 @@ if [ -z "$ZSH_CUSTOM" ]; then
   ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 fi
 mklink ~/dotfiles/dots/oh-my-zsh ~/.oh-my-zsh
-recursive_link ~/dotfiles/zsh-custom "$ZSH_CUSTOM"
+mklink "~/dotfiles/zsh-custom" "$ZSH_CUSTOM"
