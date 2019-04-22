@@ -20,6 +20,8 @@ syntax on
 " Add line numbers 
 set number
 
+se mouse+=a
+
 " Add paste toggle 
 set pastetoggle=<F2>
 
