@@ -93,16 +93,17 @@ mklink() {
   fi
 
   if [ ! -e "$targetFile" ]; then
-    execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+    execute "ln -fs \"$sourceFile\" \"$targetFile\"" "$targetFile → $sourceFile"
   elif [[ "$(readlink "$targetFile")" == "$sourceFile" ]]; then
     print_success "$targetFile → $sourceFile"
   else
     if [ ! -z "$backupTo" ]; then
-      print_success "Backup'd $targetFile → $backupTo"
-      execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+      mkdir -p "$backupToDir"
+      execute "mv \"$targetFile\" \"$backupTo\"" "Backup'd $targetFile → $backupTo"
+      execute "ln -fs \"$targetFile\" \"$sourceFile\"" "$targetFile → $sourceFile"
     elif ask_for_confirmation "'$targetFile' already exists, do you want to overwrite it?"; then
       rm -r "$targetFile"
-      execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+      execute "ln -fs \"$sourceFile\" \"$targetFile\"" "$targetFile → $sourceFile"
     else
       print_error "$targetFile → $sourceFile"
     fi
@@ -114,9 +115,9 @@ recursive_link() {
     fname="$(basename "$f")"
     if [ \! -L "$2/$fname" -a -d "$2/$fname" -a -d "$f" ]; then
       # dir to dir
-      recursive_link "$f" "$2/$fname"
+      recursive_link "$f" "$2/$fname" "$3/$fname"
     else
-      mklink "$f" "$2/$fname"
+      mklink "$f" "$2/$fname" "$3"
     fi
   done
 }
@@ -184,4 +185,4 @@ if [ -z "$ZSH_CUSTOM" ]; then
   ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 fi
 mklink ~/dotfiles/dots/oh-my-zsh ~/.oh-my-zsh
-recursive_link "$ZSH_CUSTOM" "~/dotfiles/zsh-custom"
+recursive_link "$DOTFILES_DIR/zsh-custom" "$ZSH_CUSTOM"
