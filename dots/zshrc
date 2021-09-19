@@ -121,6 +121,7 @@ else
   export EDITOR='vim'
 fi
 
+# Random path shit
 export THEOS=~/theos
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
@@ -128,6 +129,7 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Turtle Internal
 function trtl-gh {
@@ -137,3 +139,4 @@ function trtl-gh {
 function trtl-gist {
     trtl-gh gist create -w $@
 }
+
