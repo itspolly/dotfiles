@@ -128,3 +128,12 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Turtle Internal
+function trtl-gh {
+    GH_HOST=git.internal.trtl.pro gh $@
+}
+
+function trtl-gist {
+    trtl-gh gist create -w $@
+}
